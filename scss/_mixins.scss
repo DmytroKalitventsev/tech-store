@@ -1,0 +1,12 @@
+@mixin flex($jc: center, $ai: center, $fd: row) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+	flex-direction: $fd;
+}
+
+@mixin grid($jc: center, $ai: center) {
+	display: grid;
+	justify-content: $jc;
+	align-items: $ai;
+}
