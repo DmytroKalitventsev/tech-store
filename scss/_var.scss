@@ -3,18 +3,18 @@ $bp0: 1200px;
 $bp1: 1035px;
 $bp2: 950px;
 $bp3: 860px;
-$bp4: 767.98px;
+$tablet: 767.98px;
 $bp5: 576px;
 $bp6: 430px;
 
-// additional color of text site
+// additional color for background
+$addColorBg: #000;
+
+// additional color for text
 $addColorText: #fff;
 
-// main color of elements
-$mainColorElements: #ffffff;
+// main color for elements
+$mainColorElements: #0156FF;
 
-// additional color of elements
-$addColorElements: #ffffff;
-
-// color of icons
-$colorIcons: #ffffff;
+// main color for elements
+$hoverColorElements: #0137a3;
