@@ -8,7 +8,7 @@
 body {
 	background-color: #fff;
 	&::-webkit-scrollbar {
-		width: 0.8rem;
+		width: 1rem;
 	}
 	&::-webkit-scrollbar-track {
 		background: #fff;
@@ -18,7 +18,7 @@ body {
 		background: $mainColorElements;
 		border: 3px solid #fff;
 		border-radius: 10px;
-		height: 6rem;
+		height: 5rem;
 		&:hover {
 			background: $hoverColorElements;
 		}
@@ -53,5 +53,4 @@ body {
 	color: $mainColorElements;
 	outline: 2px solid $mainColorElements;
 	border-radius: 50px;
-	// transition: background-color 0.2s ease 0s;
 }
