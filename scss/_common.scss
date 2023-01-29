@@ -32,7 +32,7 @@ body {
 	min-height: 100%;
 }
 
-.container {
+[class*="__container"] {
 	max-width: 1430px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -51,6 +51,29 @@ body {
 	white-space: nowrap;
 	font-size: 1.08rem;
 	color: $mainColorElements;
-	outline: 2px solid $mainColorElements;
+	border: 2px solid $mainColorElements;
 	border-radius: 50px;
+}
+
+.drop-card {
+	@include flex(center, flex-start, column);
+	position: absolute;
+	padding: 25px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.14);
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+	transform: translateY(10px);
+	transition: all 0.18s ease;
+	&::after {
+		content: "";
+		position: absolute;
+		top: -12px;
+		width: 30px;
+		height: 12px;
+		background-image: url(/img/decor/arrow.svg);
+		background-size: cover;
+	}
 }

@@ -1,10 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-	<symbol id="arrow" viewBox="0 0 6 5">
-		<g>
-			<path fill-rule="evenodd" clip-rule="evenodd"
-				d="M0.434312 1.20354C0.746731 0.891118 1.25326 0.891118 1.56568 1.20354L3 2.63785L4.43431 1.20354C4.74673 0.891118 5.25326 0.891118 5.56568 1.20354C5.8781 1.51596 5.8781 2.02249 5.56568 2.33491L3 4.90059L0.434312 2.33491C0.121892 2.02249 0.121892 1.51596 0.434312 1.20354Z" />
-		</g>
-	</symbol>
 	<symbol id="search" viewBox="0 0 17 16">
 		<g>
 			<path fill-rule="evenodd" clip-rule="evenodd"

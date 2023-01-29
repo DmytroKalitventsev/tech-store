@@ -1,0 +1,103 @@
+.user-actions {
+	@include flex;
+	column-gap: 30px;
+}
+.search {
+	cursor: pointer;
+	&__icon {
+		&-wrap {
+			width: 17px;
+			height: 17px;
+		}
+	}
+}
+.cart {
+	position: relative;
+	&:hover {
+		& .cart-card {
+			visibility: visible;
+			opacity: 1;
+			z-index: 20;
+			transform: translateY(-2px);
+		}
+	}
+	&__button {
+		cursor: pointer;
+		position: relative;
+	}
+	&__icon {
+		&-wrap {
+			width: 19px;
+			height: 17px;
+		}
+	}
+	&__quantity {
+		@include flex;
+		position: absolute;
+		top: -10px;
+		right: -11px;
+		width: 16px;
+		height: 16px;
+		background-color: $mainColorElements;
+		border-radius: 50%;
+		color: #fff;
+		font-size: 0.8rem;
+	}
+	&-card {
+		right: -65px;
+		top: 57px;
+		width: 310px;
+		height: 400px;
+		&::after {
+			left: 71%;
+		}
+	}
+}
+.profile {
+	position: relative;
+	&:hover {
+		& .profile-card {
+			visibility: visible;
+			opacity: 1;
+			z-index: 20;
+			transform: translateY(-2px);
+		}
+	}
+	&__user {
+		position: relative;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 2px solid #000;
+		padding: 10px;
+	}
+	&__icon {
+		&-wrap {
+			width: 12px;
+			height: 12px;
+		}
+	}
+	&__avatar {
+		&-wrap{
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 50%;
+			overflow: hidden;
+			transform: scale(1.2);
+		}
+	}
+	&-card {
+		row-gap: 5px;
+		right: 0;
+		top: 66px;
+		width: 232px;
+		font-weight: 500;
+		font-size: 1.08rem;
+		line-height: 1.57;
+		&::after {
+			left: 86%;
+		}
+		&__item {}
+		&__link {}
+	}
+}

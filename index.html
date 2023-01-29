@@ -14,19 +14,19 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="top-banner">
-				<div class="container">
+				<div class="top-banner__container">
 					<div class="top-banner__content">
-						<div class="top-banner__schedule">
-							<div class="top-banner__schedule-main">
-								<span class="top-banner__schedule-day">Mon-Thu:</span>
-								<span class="top-banner__schedule-time">9:00 AM - 5:30 PM</span>
-								<div class="top-banner__schedule-arrow">
-									<svg class="top-banner__schedule-icon">
-										<use xlink:href="./img/svg/header.svg#arrow"></use>
+						<div class="schedule">
+							<div class="schedule__main">
+								<span class="schedule__day">Mon-Thu:</span>
+								<span class="schedule__time">9:00 AM - 5:30 PM</span>
+								<div class="schedule__icon-wrap">
+									<svg class="schedule__icon">
+										<use xlink:href="./img/sprite-svg/top-banner.svg#arrow"></use>
 									</svg>
 								</div>
 							</div>
-							<div class="top-banner__schedule-list drop-list">
+							<div class="schedule-card drop-card">
 							</div>
 						</div>
 						<div class="top-banner__address">
@@ -35,20 +35,20 @@
 							</div>
 							<div class="top-banner__address-list">Contact Us</div>
 						</div>
-						<div class="top-banner__contacts">
-							<div class="top-banner__contact">
-								<span class="top-banner__contact-item">Call Us:</span>
-								<a class="top-banner__contact-number" href="#">(066) 821 0313</a>
+						<div class="contacts">
+							<div class="contact">
+								<span class="contact__item">Call Us:</span>
+								<a class="contact__number" href="#">(066) 821 0313</a>
 							</div>
-							<div class="top-banner__socials">
-								<a class="top-banner__social" href="#">
-									<svg class="top-banner__social-icon">
-										<use xlink:href="./img/svg/social.svg#facebook"></use>
+							<div class="social">
+								<a class="social__icon-wrap" href="#">
+									<svg class="social__icon">
+										<use xlink:href="./img/sprite-svg/social.svg#facebook"></use>
 									</svg>
 								</a>
-								<a class="top-banner__social" href="#">
-									<svg class="top-banner__social-icon">
-										<use xlink:href="./img/svg/social.svg#instagram"></use>
+								<a class="social__icon-wrap" href="#">
+									<svg class="social__icon">
+										<use xlink:href="./img/sprite-svg/social.svg#instagram"></use>
 									</svg>
 								</a>
 							</div>
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 			<div class="header__menu">
-				<div class="container">
+				<div class="header__container">
 					<div class="header__content">
 						<button class="button-menu" type="button">
 							<span class="button-menu__item"></span>
@@ -88,38 +88,59 @@
 								<li class="menu__item">
 									<a class="menu__link" href="#">Repairs</a>
 								</li>
+								<li class="menu__item">
+									<a class="menu__link menu__link_offer button" href="#">Our Deals</a>
+								</li>
 							</ul>
-							<button class="menu__button button" type="button">Our Deals</button>
 						</nav>
-						<div class="custom-menu">
-							<div class="custom-menu__search">
-								<svg class="custom-menu__search-icon">
-									<use xlink:href="./img/svg/header.svg#search"></use>
-								</svg>
-							</div>
-							<div class="custom-menu__card">
-								<div class="custom-menu__card-button">
-									<svg class="custom-menu__card-icon">
-										<use xlink:href="./img/svg/header.svg#card"></use>
-									</svg>
-									<span class="custom-menu__card-quantity">2</span>
-								</div>
-								<div class="custom-menu__card-list drop-list">
-								</div>
-							</div>
-							<div class="custom-menu__profile">
-								<div class="custom-menu__profile-user">
-									<svg class="custom-menu__profile-icon">
-										<use xlink:href="./img/svg/header.svg#profile"></use>
+						<div class="user-actions">
+							<div class="search">
+								<div class="search__icon-wrap">
+									<svg class="search-icon">
+										<use xlink:href="./img/sprite-svg/header.svg#search"></use>
 									</svg>
 								</div>
-								<div class="custom-menu__profile-list drop-list">
-									<a class="custom-menu__profile-link" href="#">My Account</a>
-									<a class="custom-menu__profile-link" href="#">My Wish List (0)</a>
-									<a class="custom-menu__profile-link" href="#">Compare (0)</a>
-									<a class="custom-menu__profile-link" href="#">Create an Account</a>
-									<a class="custom-menu__profile-link" href="#">Sign In</a>
+							</div>
+							<div class="cart">
+								<div class="cart__button">
+									<div class="cart__icon-wrap">
+										<svg class="cart__icon">
+											<use xlink:href="./img/sprite-svg/header.svg#card"></use>
+										</svg>
+									</div>
+									<span class="cart__quantity">2</span>
 								</div>
+								<div class="cart-card drop-card">
+								</div>
+							</div>
+							<div class="profile">
+								<div class="profile__user">
+									<div class="profile__icon-wrap">
+										<svg class="profile__icon">
+											<use xlink:href="./img/sprite-svg/header.svg#profile"></use>
+										</svg>
+									</div>
+									<div class="profile__avatar-wrap">
+										<img class="profile__avatar" src="./img/header/avatar.png" alt="avatar">
+									</div>
+								</div>
+								<ul class="profile-card drop-card">
+									<li class="profile-card__item">
+										<a class="profile-card__link" href="#">My Account</a>
+									</li>
+									<li class="profile-card__item">
+										<a class="profile-card__link" href="#">My Wish List (0)</a>
+									</li>
+									<li class="profile-card__item">
+										<a class="profile-card__link" href="#">Compare (0)</a>
+									</li>
+									<li class="profile-card__item">
+										<a class="profile-card__link" href="#">Create an Account</a>
+									</li>
+									<li class="profile-card__item">
+										<a class="profile-card__link" href="#">Sign In</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

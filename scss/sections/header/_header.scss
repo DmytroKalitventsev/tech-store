@@ -18,13 +18,17 @@
 		}
 	}
 }
+.button-menu {
+	display: none;
+}
+.logo {
+	flex: 0 0 40px;
+	&__img {
+	}
+}
 .menu {
 	@include flex(flex-start);
 	flex: 1 1 auto;
-	column-gap: 15px;
-	@media (max-width: $bp0) {
-		column-gap: 5px;
-	}
 	&__list {
 		@include flex;
 		flex-wrap: wrap;
@@ -45,6 +49,13 @@
 		padding: 8px 12px;
 		border-radius: 50px;
 		transition: 0.3s ease 0s;
+		&:hover {
+			color: #fff;
+			&::before {
+				top: -30px;
+				left: -30px;
+			}
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -57,60 +68,19 @@
 			border-radius: 50%;
 			transition: 0.7s ease 0s;
 		}
-		&:hover {
-			color: #fff;
-			&::before {
-				top: -30px;
-				left: -30px;
-			}
+		&_offer {
+			padding: 7px 24px;
 		}
 		@media (max-width: $bp0) {
 			padding: 8px 10px;
-		}
-	}
-	&__button {
-		position: relative;
-		z-index: 1;
-		overflow: hidden;
-		background-color: #fff;
-		padding: 7px 24px;
-		transition: background 0.5s ease 0s;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 100%;
-			z-index: -1;
-			background: $mainColorElements;
-			height: 200px;
-			width: 250px;
-			border-radius: 50%;
-			transition: 0.7s ease 0s;
-		}
-		&:hover {
-			color: #fff;
-			outline: initial;
-			&::before {
-				top: -30px;
-				left: -30px;
+			&_offer {
+				padding: 7px 14px;
 			}
 		}
-		&:active::before {
-			background: $hoverColorElements;
-			transition: 0s ease 0s;
-		}
-	}
-}
-.button-menu {
-	display: none;
-}
-.logo {
-	flex: 0 0 40px;
-	&__img {
 	}
 }
 
-@import "./custom-menu";
+@import "./user-actions";
 
 // @media (max-width: $bp2) {
 // 	.header__container {
