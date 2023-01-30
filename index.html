@@ -27,6 +27,54 @@
 								</div>
 							</div>
 							<div class="schedule-card drop-card">
+								<div class="schedule-card__items">
+									<div class="schedule-card__icon-wrap">
+										<svg class="schedule-card__icon">
+											<use xlink:href="./img/sprite-svg/card.svg#clock"></use>
+										</svg>
+									</div>
+									<div class="schedule-card__time">
+										<div class="schedule-card__time-title">We are open:</div>
+										<div class="schedule-card__time-items">
+											<span
+												class="schedule-card__time-item schedule-card__time-item_color">Mon-Thu:</span>
+											<span class="schedule-card__time-item">9:00 AM - 5:30 PM</span>
+										</div>
+										<div class="schedule-card__time-items">
+											<span
+												class="schedule-card__time-item schedule-card__time-item_color">Fr:</span>
+											<span class="schedule-card__time-item">9:00 AM - 6:00 PM</span>
+										</div>
+										<div class="schedule-card__time-items">
+											<span
+												class="schedule-card__time-item schedule-card__time-item_color">Sat:</span>
+											<span class="schedule-card__time-item">11:00 AM - 5:00 PM</span>
+										</div>
+									</div>
+								</div>
+								<a class="schedule-card__items" href="#">
+									<div class="schedule-card__icon-wrap">
+										<svg class="schedule-card__icon">
+											<use xlink:href="./img/sprite-svg/card.svg#location"></use>
+										</svg>
+									</div>
+									<div class="schedule-card__address">
+										Address: 1234 Street Adress, City Address, 1234
+									</div>
+								</a>
+								<div class="schedule-card__contacts">
+									<a class="schedule-card__contact" href="#">
+										<span class="schedule-card__contact-item">Phones:</span>
+										<span
+											class="schedule-card__contact-item schedule-card__contact-item_color">(066)
+											821 0313</span>
+									</a>
+									<a class="schedule-card__contact" href="#">
+										<span class="schedule-card__contact-item">E-mail:</span>
+										<span
+											class="schedule-card__contact-item schedule-card__contact-item_color">shop@email.com</span>
+									</a>
+								</div>
 							</div>
 						</div>
 						<div class="top-banner__address">
@@ -36,10 +84,10 @@
 							<div class="top-banner__address-list">Contact Us</div>
 						</div>
 						<div class="contacts">
-							<div class="contact">
+							<a class="contact" href="#">
 								<span class="contact__item">Call Us:</span>
-								<a class="contact__number" href="#">(066) 821 0313</a>
-							</div>
+								<div class="contact__number">(066) 821 0313</div>
+							</a>
 							<div class="social">
 								<a class="social__icon-wrap" href="#">
 									<svg class="social__icon">
@@ -88,36 +136,117 @@
 								<li class="menu__item">
 									<a class="menu__link" href="#">Repairs</a>
 								</li>
-								<li class="menu__item">
+								<li class="menu__item menu__item_offer">
 									<a class="menu__link menu__link_offer button" href="#">Our Deals</a>
 								</li>
 							</ul>
 						</nav>
 						<div class="user-actions">
 							<div class="search">
-								<div class="search__icon-wrap">
-									<svg class="search-icon">
-										<use xlink:href="./img/sprite-svg/header.svg#search"></use>
+								<form class="search__form" action="#">
+									<label class="search__label">
+										<input class="search__input" type="text" name="search"
+											placeholder="Search entiere store here...">
+									</label>
+								</form>
+								<button class="search__open-wrap" type="submit">
+									<svg class="search__open">
+										<use xlink:href="./img/sprite-svg/user-actions.svg#search"></use>
 									</svg>
-								</div>
+								</button>
+								<button class="search__close-wrap" type="button">
+									<svg class="search__close">
+										<use xlink:href="./img/sprite-svg/user-actions.svg#close"></use>
+									</svg>
+								</button>
 							</div>
 							<div class="cart">
 								<div class="cart__button">
 									<div class="cart__icon-wrap">
 										<svg class="cart__icon">
-											<use xlink:href="./img/sprite-svg/header.svg#card"></use>
+											<use xlink:href="./img/sprite-svg/user-actions.svg#cart"></use>
 										</svg>
 									</div>
 									<span class="cart__quantity">2</span>
 								</div>
 								<div class="cart-card drop-card">
+									<div class="cart-card__items">
+										<div class="cart-card__title">My Cart</div>
+										<div class="cart-card__quantity-goods">2 item in cart</div>
+										<button class="cart-card__view-button button" type="button">
+											View or Edit Your Cart
+										</button>
+									</div>
+									<div class="cart-card__items cart-card__items_gap">
+										<div class="card-goods">
+											<div class="card-goods__number">1 x</div>
+											<div class="card-goods__img-wrap">
+												<img class="card-goods__img" src="./img/card/goods.png" alt="#">
+											</div>
+											<div class="card-goods__descr">
+												<span class="card-goods__descr-item">EX DISPLAY : MSI Pro 16</span>
+												<span class="card-goods__descr-item">Flex-036AU 15.6</span>
+												<span class="card-goods__descr-item">MULTITOUCH All-In-On...</span>
+											</div>
+											<div class="card-goods__actions">
+												<button class="card-goods__action" type="button">
+													<svg class="card-goods__action-icon">
+														<use xlink:href="./img/sprite-svg/card.svg#delet"></use>
+													</svg>
+												</button>
+												<button class="card-goods__action" type="button">
+													<svg class="card-goods__action-icon">
+														<use xlink:href="./img/sprite-svg/card.svg#change"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="card-goods">
+											<div class="card-goods__number">1 x</div>
+											<div class="card-goods__img-wrap">
+												<img class="card-goods__img" src="./img/card/goods.png" alt="#">
+											</div>
+											<div class="card-goods__descr">
+												<span class="card-goods__descr-item">EX DISPLAY : MSI Pro 16</span>
+												<span class="card-goods__descr-item">Flex-036AU 15.6</span>
+												<span class="card-goods__descr-item">MULTITOUCH All-In-On...</span>
+											</div>
+											<div class="card-goods__actions">
+												<button class="card-goods__action" type="button">
+													<svg class="card-goods__action-icon">
+														<use xlink:href="./img/sprite-svg/card.svg#delet"></use>
+													</svg>
+												</button>
+												<button class="card-goods__action" type="button">
+													<svg class="card-goods__action-icon">
+														<use xlink:href="./img/sprite-svg/card.svg#change"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="cart-card__items">
+										<div class="cart-card__subtotal">
+											<span class="cart-card__subtotal-text">Subtotal:</span>
+											<span class="cart-card__subtotal-total">$499.00</span>
+										</div>
+										<button class="cart-card__checkout button" type="button">
+											Go to Checkout
+										</button>
+										<button class="cart-card__check button" type="button">
+											<span class="cart-card__check-text">Check out with</span>
+											<div class="cart-card__check-icon">
+												<img class="cart-card__icon-check" src="./img/decor/paypal.svg" alt="#">
+											</div>
+										</button>
+									</div>
 								</div>
 							</div>
 							<div class="profile">
 								<div class="profile__user">
 									<div class="profile__icon-wrap">
 										<svg class="profile__icon">
-											<use xlink:href="./img/sprite-svg/header.svg#profile"></use>
+											<use xlink:href="./img/sprite-svg/user-actions.svg#profile"></use>
 										</svg>
 									</div>
 									<div class="profile__avatar-wrap">

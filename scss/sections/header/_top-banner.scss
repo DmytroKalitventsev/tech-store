@@ -12,6 +12,7 @@
 		@include flex;
 		column-gap: 5px;
 		cursor: pointer;
+		padding: 13px 0px 13px 0px;
 		&-text {
 			color: #acacac;
 		}
@@ -46,6 +47,7 @@
 	&__main {
 		@include flex;
 		column-gap: 5px;
+		padding: 13px 0px 13px 0px;
 		cursor: pointer;
 	}
 	&__day {
@@ -56,17 +58,85 @@
 	&__icon {
 		transition: 0.3s ease 0s;
 		&-wrap {
-			width: 6px;
-			height: 4px;
+			width: 8px;
+			height: 6px;
 		}
 	}
-	&-card {
-		left: 0;
-		top: 33px;
-		width: 262px;
-		height: 230px;
+}
+.schedule-card {
+	row-gap: 25px;
+	left: 0;
+	top: 46px;
+	width: 260px;
+	padding: 15px;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.4;
+	&::after {
+		left: 6%;
+	}
+	&__items {
+		@include flex(flex-start, flex-start);
+		column-gap: 10px;
+	}
+	&__icon {
+		&-wrap {
+			color: $mainColorElements;
+			flex: 0 0 25px;
+			height: 25px;
+			margin-top: 5px;
+		}
+	}
+	&__time {
+		@include flex(flex-start, flex-start, column);
+		row-gap: 5px;
+		position: relative;
 		&::after {
-			left: 6%;
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			left: -50px;
+			width: 260px;
+			height: 1px;
+			background-color: #d9d9d9;
+		}
+		&-title {
+			font-size: 0.93rem;
+		}
+		&-items {
+			@include flex;
+			column-gap: 5px;
+			font-weight: 600;
+		}
+		&-item {
+			&_color {
+				color: #a2a6b0;
+			}
+		}
+	}
+	&__address {
+	}
+	&__contacts {
+		@include flex(flex-start, flex-start, column);
+		row-gap: 5px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -13px;
+			left: -15px;
+			width: 260px;
+			height: 1px;
+			background-color: #d9d9d9;
+		}
+	}
+	&__contact {
+		@include flex;
+		column-gap: 5px;
+		&-item {
+			&_color {
+				color: $mainColorElements;
+			}
 		}
 	}
 }
@@ -77,6 +147,7 @@
 .contact {
 	@include flex;
 	column-gap: 4px;
+	padding: 13px 0px 13px 0px;
 	cursor: pointer;
 	&:hover {
 		& .contact__number::after {
@@ -103,9 +174,10 @@
 	@include flex;
 	column-gap: 10px;
 	&__icon {
+		width: 15px;
+		height: 15px;
 		&-wrap {
-			width: 15px;
-			height: 15px;
+			padding: 13px 0px 13px 0px;
 		}
 	}
 }

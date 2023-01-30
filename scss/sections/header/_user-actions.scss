@@ -1,13 +1,83 @@
 .user-actions {
 	@include flex;
-	column-gap: 30px;
+	column-gap: 20px;
 }
 .search {
-	cursor: pointer;
-	&__icon {
+	@include flex;
+	position: relative;
+	&:hover {
+		& .search__form {
+			visibility: visible;
+			opacity: 1;
+			z-index: 20;
+			transform: translateY(-2px);
+		}
+		& .search__close-wrap {
+			visibility: visible;
+			opacity: 1;
+			z-index: 20;
+		}
+		& .search__open {
+			position: relative;
+			z-index: 20;
+			transform: translateX(-70px);
+		}
+	}
+	&__form {
+		position: absolute;
+		top: -8px;
+		right: 55px;
+		z-index: 20;
+		width: 1125px;
+		height: 60px;
+		background-color: #f5f7ff;
+		border-radius: 30px;
+		visibility: hidden;
+		opacity: 0;
+		z-index: -1;
+		transform: translateY(10px);
+		transition: all 0.18s ease;
+	}
+	&__label {
+		width: 100%;
+		height: 100%;
+	}
+	&__input {
+		font-size: 1.2rem;
+		padding: 20px 30px;
+		background-color: inherit;
+		border-radius: 30px;
+		width: 100%;
+		height: 100%;
+		&:focus {
+			outline: 2px solid $mainColorElements;
+		}
+		&::placeholder {
+			font-weight: 400;
+			font-size: 1.08rem;
+			color: #a2a6b0;
+		}
+	}
+	&__open {
+		width: 18px;
+		height: 18px;
 		&-wrap {
-			width: 17px;
-			height: 17px;
+			padding: 12px 10px 10px 10px;
+		}
+	}
+	&__close {
+		color: $mainColorElements;
+		width: 16px;
+		height: 16px;
+		&-wrap {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			padding: 10px;
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+			transition: all 0.18s ease;
 		}
 	}
 }
@@ -26,33 +96,128 @@
 		position: relative;
 	}
 	&__icon {
+		width: 19px;
+		height: 17px;
 		&-wrap {
-			width: 19px;
-			height: 17px;
+			padding: 10px 15px 10px 0px;
 		}
 	}
 	&__quantity {
 		@include flex;
 		position: absolute;
-		top: -10px;
-		right: -11px;
-		width: 16px;
-		height: 16px;
+		top: 0;
+		right: 3px;
+		height: 17px;
+		width: 17px;
 		background-color: $mainColorElements;
 		border-radius: 50%;
 		color: #fff;
 		font-size: 0.8rem;
+		font-weight: 700;
+		line-height: 1;
 	}
-	&-card {
-		right: -65px;
-		top: 57px;
-		width: 310px;
-		height: 400px;
-		&::after {
-			left: 71%;
+}
+.cart-card {
+	row-gap: 32px;
+	right: -55px;
+	top: 66px;
+	width: 310px;
+	font-weight: 600;
+	line-height: 1;
+	padding: 30px 20px;
+	&::after {
+		left: 69%;
+	}
+	&__items {
+		@include flex(center, center, column);
+		width: 100%;
+		&_gap {
+			row-gap: 32px;
+		}
+	}
+	&__title {
+		font-size: 1.38rem;
+		margin-bottom: 10px;
+	}
+	&__quantity-goods {
+		font-weight: 400;
+		font-size: 0.92rem;
+		color: #a2a6b0;
+		margin-bottom: 20px;
+	}
+	&__view-button {
+		padding: 6px 47px;
+	}
+	&__subtotal {
+		@include flex;
+		column-gap: 5px;
+		margin-bottom: 15px;
+		&-text {
+			color: #a2a6b0;
+		}
+		&-total {
+			font-size: 1.38rem;
+		}
+	}
+	&__checkout {
+		margin-bottom: 7px;
+		padding: 6px 69px;
+		color: #fff;
+		background-color: $mainColorElements;
+	}
+	&__check {
+		@include flex;
+		column-gap: 10px;
+		padding: 9px 39px;
+		background-color: #ffb800;
+		font-size: 0.92rem;
+		border: initial;
+		&-text {
+			color: #000;
+		}
+		&-icon {
+			width: 72px;
+		}
+	}
+	&__icon-check {
+	}
+}
+.card-goods {
+	@include flex;
+	column-gap: 5px;
+	font-weight: 400;
+	&__number {
+		font-size: 1.38rem;
+		white-space: nowrap;
+	}
+	&__img {
+		&-wrap {
+			height: 65px;
+		}
+	}
+	&__descr {
+		@include flex(center, flex-start, column);
+		row-gap: 7px;
+		&-item {
+		}
+	}
+	&__actions {
+		@include flex(center, center, column);
+		row-gap: 5px;
+		align-self: start;
+	}
+	&__action {
+		border: 1.5px solid #cacdd8;
+		border-radius: 50%;
+		padding: 4px;
+		&-icon {
+			color: #a2a6b0;
+			width: 10px;
+			height: 10px;
 		}
 	}
 }
+
 .profile {
 	position: relative;
 	&:hover {
@@ -77,7 +242,7 @@
 		}
 	}
 	&__avatar {
-		&-wrap{
+		&-wrap {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -86,18 +251,21 @@
 			transform: scale(1.2);
 		}
 	}
-	&-card {
-		row-gap: 5px;
-		right: 0;
-		top: 66px;
-		width: 232px;
-		font-weight: 500;
-		font-size: 1.08rem;
-		line-height: 1.57;
-		&::after {
-			left: 86%;
-		}
-		&__item {}
-		&__link {}
+}
+.profile-card {
+	row-gap: 5px;
+	right: 0;
+	top: 66px;
+	width: 230px;
+	padding: 20px 25px;
+	font-weight: 500;
+	font-size: 1.08rem;
+	line-height: 1.57;
+	&::after {
+		left: 86%;
+	}
+	&__item {
+	}
+	&__link {
 	}
 }
