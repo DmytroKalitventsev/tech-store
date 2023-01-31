@@ -1,6 +1,9 @@
 .header-actions {
 	@include flex;
 	column-gap: 20px;
+	@media (max-width: $bpLaptopMax2) {
+		column-gap: 10px;
+	}
 }
 .search {
 	@include flex;
@@ -115,6 +118,9 @@
 		font-size: 0.8rem;
 		font-weight: 700;
 		line-height: 1;
+		@media (max-width: $bpLaptopMax1) {
+			line-height: 0;
+		}
 	}
 }
 .cart-card {

@@ -53,6 +53,12 @@ body {
 	color: $mainColorElements;
 	border: 2px solid $mainColorElements;
 	border-radius: 50px;
+	@media (max-width: $bpLaptopMax1) {
+		font-size: 1.04rem;
+	}
+	@media (max-width: $bpLaptopMax2) {
+		font-size: 1rem;
+	}
 }
 
 .drop-card {
