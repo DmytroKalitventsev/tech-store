@@ -65,7 +65,7 @@
 }
 .schedule-card {
 	row-gap: 25px;
-	left: 0;
+	left: 144px;
 	top: 46px;
 	width: 260px;
 	padding: 15px;
@@ -177,7 +177,16 @@
 		width: 15px;
 		height: 15px;
 		&-wrap {
-			padding: 13px 0px 13px 0px;
+			padding: 14px 0px 15px 0px;
+			transition: 0.3s ease 0s;
+			&:hover {
+				&:first-child {
+					color: $mainColorElements;
+				}
+				&:last-child {
+					color: #c94d3f;
+				}
+			}
 		}
 	}
 }
