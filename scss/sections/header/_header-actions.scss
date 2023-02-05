@@ -26,41 +26,42 @@
 			transform: translateX(-70px);
 		}
 	}
-	&__form {
-		position: absolute;
-		top: -8px;
-		right: 55px;
-		z-index: 20;
-		width: 1125px;
-		height: 60px;
-		background-color: #f5f7ff;
-		border-radius: 30px;
-		visibility: hidden;
-		opacity: 0;
-		z-index: -1;
-		transform: translateY(10px);
-		transition: all 0.18s ease;
-	}
-	&__label {
-		width: 100%;
-		height: 100%;
-	}
-	&__input {
-		font-size: 1.2rem;
-		padding: 20px 30px;
-		background-color: inherit;
-		border-radius: 30px;
-		width: 100%;
-		height: 100%;
-		&:focus {
-			outline: 2px solid $mainColorElements;
-		}
-		&::placeholder {
-			font-weight: 400;
-			font-size: 1.08rem;
-			color: #a2a6b0;
-		}
-	}
+//! Потрібно повернути після завершення адаптиву
+	// &__form {
+	// 	position: absolute;
+	// 	top: -8px;
+	// 	right: 55px;
+	// 	z-index: 20;
+	// 	width: 1125px;
+	// 	height: 60px;
+	// 	background-color: #f5f7ff;
+	// 	border-radius: 30px;
+	// 	visibility: hidden;
+	// 	opacity: 0;
+	// 	z-index: -1;
+	// 	transform: translateY(10px);
+	// 	transition: all 0.18s ease;
+	// }
+	// &__label {
+	// 	width: 100%;
+	// 	height: 100%;
+	// }
+	// &__input {
+	// 	font-size: 1.2308rem;
+	// 	padding: 20px 30px;
+	// 	background-color: inherit;
+	// 	border-radius: 30px;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	&:focus {
+	// 		outline: 2px solid $mainColorElements;
+	// 	}
+	// 	&::placeholder {
+	// 		font-weight: 400;
+	// 		font-size: 1.0769rem;
+	// 		color: #a2a6b0;
+	// 	}
+	// }
 	&__open {
 		width: 18px;
 		height: 18px;
@@ -110,12 +111,12 @@
 		position: absolute;
 		top: 0;
 		right: 3px;
-		height: 17px;
-		width: 17px;
+		height: 16px;
+		width: 16px;
 		background-color: $mainColorElements;
 		border-radius: 50%;
 		color: #fff;
-		font-size: 0.8rem;
+		font-size: .7692rem;
 		font-weight: 700;
 		line-height: 1;
 		@media (max-width: $bpLaptopMax1) {
@@ -152,12 +153,12 @@
 		}
 	}
 	&__title {
-		font-size: 1.38rem;
+		font-size: 1.3846rem;
 		margin-bottom: 10px;
 	}
 	&__quantity-goods {
 		font-weight: 400;
-		font-size: 0.92rem;
+		font-size: .9231rem;
 		color: #a2a6b0;
 		margin-bottom: 20px;
 	}
@@ -172,7 +173,7 @@
 			color: #a2a6b0;
 		}
 		&-total {
-			font-size: 1.38rem;
+			font-size: 1.3846rem;
 		}
 	}
 	&__checkout {
@@ -186,7 +187,7 @@
 		column-gap: 10px;
 		padding: 9px 39px;
 		background-color: #ffb800;
-		font-size: 0.92rem;
+		font-size: .9231rem;
 		border: initial;
 		&-text {
 			color: #000;
@@ -213,7 +214,7 @@
 		background-color: #d9d9d9;
 	}
 	&__number {
-		font-size: 1.38rem;
+		font-size: 1.3846rem;
 		white-space: nowrap;
 	}
 	&__img {
@@ -293,7 +294,7 @@
 	width: 230px;
 	padding: 20px 25px;
 	font-weight: 500;
-	font-size: 1.08rem;
+	font-size: 1.0769rem;
 	line-height: 1.57;
 	&::after {
 		left: 86%;
