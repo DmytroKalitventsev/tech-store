@@ -9,22 +9,22 @@
 	@include flex;
 	position: relative;
 	&:hover {
-		& .search__form {
-			visibility: visible;
-			opacity: 1;
-			z-index: 20;
-			transform: translateY(-2px);
-		}
+		// & .search__form {
+		// 	visibility: visible;
+		// 	opacity: 1;
+		// 	z-index: 20;
+		// 	transform: translateY(-2px);
+		// }
 		& .search__close-wrap {
 			visibility: visible;
 			opacity: 1;
 			z-index: 20;
 		}
-		& .search__open {
-			position: relative;
-			z-index: 20;
-			transform: translateX(-70px);
-		}
+		// & .search__open {
+		// 	position: relative;
+		// 	z-index: 20;
+		// 	transform: translateX(-70px);
+		// }
 	}
 //! Потрібно повернути після завершення адаптиву
 	// &__form {

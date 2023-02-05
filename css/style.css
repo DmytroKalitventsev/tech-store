@@ -1097,23 +1097,10 @@ body::-webkit-scrollbar-thumb:hover {
           flex-direction: row;
   position: relative;
 }
-.search:hover .search__form {
-  visibility: visible;
-  opacity: 1;
-  z-index: 20;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
 .search:hover .search__close-wrap {
   visibility: visible;
   opacity: 1;
   z-index: 20;
-}
-.search:hover .search__open {
-  position: relative;
-  z-index: 20;
-  -webkit-transform: translateX(-70px);
-          transform: translateX(-70px);
 }
 .search__open {
   width: 18px;
