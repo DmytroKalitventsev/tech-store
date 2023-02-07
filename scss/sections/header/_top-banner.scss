@@ -1,12 +1,21 @@
 .top-banner {
 	color: $addColorText;
 	background-color: $addColorBg;
-	font-size: .9231rem;
+	font-size: 0.9231rem;
 	line-height: 1.5;
 	&__content {
 		@include flex(space-between);
 		min-height: 44px;
 		column-gap: 50px;
+		@media (max-width: $bpLaptopMax1) {
+			min-height: 42px;
+		}
+		@media (max-width: $bpLaptopMax2) {
+			min-height: 40px;
+		}
+		@media (max-width: $bpMobile) {
+			column-gap: 20px;
+		}
 	}
 	&__address {
 		@include flex;
@@ -15,6 +24,9 @@
 		padding: 13px 0px 13px 0px;
 		&-text {
 			color: #acacac;
+			@media (max-width: $bpLaptopMin) {
+				display: none;
+			}
 		}
 		&-list {
 			position: relative;
@@ -29,6 +41,24 @@
 				background-color: #fff;
 			}
 		}
+		@media (max-width: $bpLaptopMax1) {
+			padding: 12px 0px 12px 0px;
+		}
+		@media (max-width: $bpLaptopMax2) {
+			padding: 12px 0px 11px 0px;
+		}
+		@media (max-width: $bpMobile) {
+			padding: 12px 0px 12px 0px;
+		}
+	}
+	@media (max-width: $bpLaptopMax1) {
+		font-size: 0.8846rem;
+	}
+	@media (max-width: $bpLaptopMax2) {
+		font-size: 0.8462rem;
+	}
+	@media (max-width: $bpMobile) {
+		font-size: .7692rem;
 	}
 }
 .schedule {
@@ -49,6 +79,15 @@
 		column-gap: 5px;
 		padding: 13px 0px 13px 0px;
 		cursor: pointer;
+		@media (max-width: $bpLaptopMax1) {
+			padding: 12px 0px 12px 0px;
+		}
+		@media (max-width: $bpLaptopMax2) {
+			padding: 12px 0px 11px 0px;
+		}
+		@media (max-width: $bpMobile) {
+			padding: 14px 0px 11px 0px;
+		}
 	}
 	&__day {
 		color: #acacac;
@@ -62,6 +101,12 @@
 			height: 6px;
 		}
 	}
+	@media (max-width: $bpLaptopMin) {
+		margin-left: 95px;
+	}
+	@media (max-width: $bpMobile) {
+		margin-left: 60px;
+	}
 }
 .schedule-card {
 	row-gap: 25px;
@@ -73,11 +118,18 @@
 	font-size: 1rem;
 	line-height: 1.4;
 	&::after {
-		left: 6%;
+		left: 16px;
+		@media (max-width: $bpLaptopMin) {
+			left: initial;
+			right: 50px;
+		}
 	}
 	&__items {
 		@include flex(flex-start, flex-start);
 		column-gap: 10px;
+		@media (max-width: $bpLaptopMin) {
+			column-gap: 15px;
+		}
 	}
 	&__icon {
 		&-wrap {
@@ -85,6 +137,9 @@
 			flex: 0 0 25px;
 			height: 25px;
 			margin-top: 5px;
+			@media (max-width: $bpLaptopMin) {
+				color: #000;
+			}
 		}
 	}
 	&__time {
@@ -99,9 +154,17 @@
 			width: 260px;
 			height: 1px;
 			background-color: #d9d9d9;
+			@media (max-width: $bpLaptopMin) {
+				width: 285px;
+				left: -70px;
+			}
+			@media (max-width: $bpMobile) {
+				width: 100vw;
+				left: -85px;
+			}
 		}
 		&-title {
-			font-size: .9231rem;
+			font-size: 0.9231rem;
 		}
 		&-items {
 			@include flex;
@@ -115,6 +178,9 @@
 		}
 	}
 	&__address {
+		@media (max-width: $bpMobile) {
+			max-width: 180px;
+		}
 	}
 	&__contacts {
 		@include flex(flex-start, flex-start, column);
@@ -128,6 +194,14 @@
 			width: 260px;
 			height: 1px;
 			background-color: #d9d9d9;
+			@media (max-width: $bpLaptopMin) {
+				width: 285px;
+				left: -30px;
+			}
+			@media (max-width: $bpMobile) {
+				width: 100vw;
+				left: -45px;
+			}
 		}
 	}
 	&__contact {
@@ -139,10 +213,31 @@
 			}
 		}
 	}
+	@media (max-width: $bpLaptopMax1) {
+		left: 137px;
+		top: 43px;
+	}
+	@media (max-width: $bpLaptopMax2) {
+		left: 132px;
+		top: 42px;
+	}
+	@media (max-width: $bpLaptopMin) {
+		left: -57px;
+		width: 285px;
+		padding: 15px 25px 20px 30px;
+	}
+	@media (max-width: $bpMobile) {
+		width: 100vw;
+		left: -75px;
+		padding: 15px 45px 20px 45px;
+	}
 }
 .contacts {
 	@include flex;
 	column-gap: 15px;
+	@media (max-width: $bpLaptopMin) {
+		display: none;
+	}
 }
 .contact {
 	@include flex;
@@ -166,8 +261,14 @@
 			width: 0;
 			height: 2px;
 			background-color: #fff;
-			transition: 0.3s ease 0s;
+			transition: width 0.3s ease 0s;
 		}
+	}
+	@media (max-width: $bpLaptopMax1) {
+		padding: 12px 0px 12px 0px;
+	}
+	@media (max-width: $bpLaptopMax2) {
+		padding: 11px 0px 12px 0px;
 	}
 }
 .social {
@@ -178,7 +279,7 @@
 		height: 15px;
 		&-wrap {
 			padding: 14px 0px 15px 0px;
-			transition: 0.3s ease 0s;
+			transition: color 0.3s ease 0s;
 			&:hover {
 				&:first-child {
 					color: $mainColorElements;
@@ -186,6 +287,12 @@
 				&:last-child {
 					color: #c94d3f;
 				}
+			}
+			@media (max-width: $bpLaptopMax1) {
+				padding: 13px 0px 14px 0px;
+			}
+			@media (max-width: $bpLaptopMax2) {
+				padding: 12px 0px 13px 0px;
 			}
 		}
 	}
