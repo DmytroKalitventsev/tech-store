@@ -1,0 +1,46 @@
+.footer {
+	background-color: $addColorBg;
+	color: $addColorText;
+	&__content {
+		@include flex(center, center, column);
+		min-height: 520px;
+	}
+	&__additional-link {
+		@include flex;
+	}
+	&__copyright {
+	}
+}
+.newsletter-form {
+	@include flex;
+	&__content {
+	}
+	&__content-title {
+	}
+	&__content-descr {
+	}
+	&__email-form {
+	}
+	&__label {
+	}
+	&__input {
+	}
+	&__button {
+	}
+}
+.basic-information {
+	@include flex;
+	&__list {
+	}
+	&__item {
+	}
+	&__link {
+	}
+}
+.payment-systems {
+	@include flex;
+	&__items {
+	}
+	&__icon {
+	}
+}
