@@ -53,6 +53,10 @@ body {
 	color: $mainColorElements;
 	border: 2px solid $mainColorElements;
 	border-radius: 50px;
+	&_background {
+		color: #fff;
+		background-color: $mainColorElements;
+	}
 	@media (max-width: $bpLaptopMax1) {
 		font-size: 1.0385rem;
 	}
@@ -93,6 +97,10 @@ body {
 	&__icon {
 		width: 15px;
 		height: 15px;
+		&_footer {
+			width: 17px;
+			height: 17px;
+		}
 		&-wrap {
 			padding: 14px 0px 15px 0px;
 			transition: color 0.3s ease 0s;

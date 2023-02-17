@@ -231,7 +231,7 @@
 											<span class="cart-card__subtotal-text">Subtotal:</span>
 											<span class="cart-card__subtotal-total">$499.00</span>
 										</div>
-										<button class="cart-card__checkout button" type="button">
+										<button class="cart-card__checkout button button_background" type="button">
 											Go to Checkout
 										</button>
 										<button class="cart-card__check button" type="button">
@@ -281,7 +281,44 @@
 		<div class="hero">
 		</div>
 		<main class="page">
-			<section class="section">
+			<section class="advantages-store">
+				<div class="advantages-store__container">
+					<div class="advantages-store__content">
+						<div class="advantages-items">
+							<div class="advantages-items__icon-wrap">
+								<svg class="advantages-items__icon">
+									<use xlink:href="./img/sprite-svg/social-link.svg#facebook"></use>
+								</svg>
+							</div>
+							<h2 class="advantages-items__title">Product Support</h2>
+							<p class="advantages-items__descr">
+								Up to 3 years on-site warranty available for your peace of mind.
+							</p>
+						</div>
+						<div class="advantages-items">
+							<div class="advantages-items__icon-wrap">
+								<svg class="advantages-items__icon">
+									<use xlink:href="./img/sprite-svg/social-link.svg#facebook"></use>
+								</svg>
+							</div>
+							<h2 class="advantages-items__title">Personal Account</h2>
+							<p class="advantages-items__descr">
+								With big discounts, free delivery and a dedicated support specialist.
+							</p>
+						</div>
+						<div class="advantages-items">
+							<div class="advantages-items__icon-wrap">
+								<svg class="advantages-items__icon">
+									<use xlink:href="./img/sprite-svg/social-link.svg#facebook"></use>
+								</svg>
+							</div>
+							<h2 class="advantages-items__title">Amazing Savings</h2>
+							<p class="advantages-items__descr">
+								Up to 70% off new Products, you can be sure of the best price.
+							</p>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">
@@ -296,18 +333,19 @@
 								Be the first to hear about the latest offers.
 							</p>
 						</div>
-						<form class="newsletter-form__email-form" action="#">
-							<label class="newsletter-form__label">
-								<input class="newsletter-form__input" type="email" name="email"
-									placeholder="Your Email">
+						<form class="email-form" action="#">
+							<label class="email-form__label">
+								<span class="email-form__text">Your Email</span>
+								<input class="email-form__input" type="email" name="email">
 							</label>
-							<button class="newsletter-form__button button" type="button">Subscribe</button>
+							<button class="email-form__button button button_background" type="button">Subscribe</button>
 						</form>
 					</div>
 					<div class="basic-information">
 						<ul class="basic-information__list">
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">Information</a>
+								<a class="basic-information__link basic-information__link_title"
+									href="#">Information</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">About Us</a>
@@ -339,7 +377,7 @@
 						</ul>
 						<ul class="basic-information__list">
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">PC Parts</a>
+								<a class="basic-information__link basic-information__link_title" href="#">PC Parts</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">CPUS</a>
@@ -374,7 +412,8 @@
 						</ul>
 						<ul class="basic-information__list">
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">Desktop PCs</a>
+								<a class="basic-information__link basic-information__link_title" href="#">Desktop
+									PCs</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">Custom PCs</a>
@@ -397,7 +436,7 @@
 						</ul>
 						<ul class="basic-information__list">
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">Laptops</a>
+								<a class="basic-information__link basic-information__link_title" href="#">Laptops</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">Evryday Use Notebooks</a>
@@ -418,18 +457,22 @@
 								<a class="basic-information__link" href="#">Infinity Gaming Notebooks</a>
 							</li>
 						</ul>
-						<ul class="basic-information__list">
+						<ul class="basic-information__list basic-information__list_padding">
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">Address</a>
+								<a class="basic-information__link basic-information__link_title" href="#">Address</a>
 							</li>
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">Address: 1234 Street Adress City Address, 1234</a>
+								<a class="basic-information__link" href="#">
+									Address: 1234 Street Adress City Address, 1234
+								</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">Phones: (00) 1234 5678</a>
 							</li>
 							<li class="basic-information__item">
-								<a class="basic-information__link" href="#">We are open: Monday-Thursday: 9:00 AM - 5:30 PM</a>
+								<a class="basic-information__link" href="#">
+									We are open: Monday-Thursday: 9:00 AM - 5:30 PM
+								</a>
 							</li>
 							<li class="basic-information__item">
 								<a class="basic-information__link" href="#">Friday: 9:00 AM - 6:00 PM</a>
@@ -445,12 +488,12 @@
 					<div class="footer__additional-link">
 						<div class="social social_footer">
 							<a class="social__icon-wrap" href="#">
-								<svg class="social__icon">
+								<svg class="social__icon social__icon_footer">
 									<use xlink:href="./img/sprite-svg/social-link.svg#facebook"></use>
 								</svg>
 							</a>
 							<a class="social__icon-wrap" href="#">
-								<svg class="social__icon">
+								<svg class="social__icon social__icon_footer">
 									<use xlink:href="./img/sprite-svg/social-link.svg#instagram"></use>
 								</svg>
 							</a>
