@@ -5,7 +5,11 @@
 @import "./common";
 @import "./animate";
 
-// sections
+// basic sections
 @import "./sections/header/header";
 @import "./sections/hero/hero";
 @import "./sections/footer/footer";
+
+// main sections
+@import "./sections/main/reviews/reviews";
+@import "./sections/main/advantages-store/advantages-store";

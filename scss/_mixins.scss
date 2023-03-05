@@ -12,7 +12,7 @@
 }
 
 $maxWidth: 1430;
-$maxWidthContainer: 1023.98;
+$maxWidthContainer: $bpLaptopMin;
 
 @mixin adaptive-value($property, $startSize, $minSize, $type) {
 	$addSize: $startSize - $minSize;

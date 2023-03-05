@@ -1,0 +1,36 @@
+.advantages-store {
+	padding: 50px 0;
+	&__content {
+		@include flex;
+		gap: 130px;
+	}
+}
+.advantages-items {
+	@include flex(center, center, column);
+	text-align: center;
+	&__icon-wrap {
+		@include flex;
+		width: 65px;
+		height: 65px;
+		margin-bottom: 25px;
+		color: #fff;
+		background-color: $mainColorElements;
+		border-radius: 50%;
+	}
+	&__icon {
+		width: 25px;
+		height: 25px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 1.3846rem;
+		line-height: 1.32;
+		margin-bottom: 15px;
+	}
+	&__descr {
+		font-weight: 400;
+		font-size: 1.0769rem;
+		line-height: 1.4;
+		max-width: 265px;
+	}
+}
