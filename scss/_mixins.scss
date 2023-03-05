@@ -5,10 +5,10 @@
 	flex-direction: $fd;
 }
 
-@mixin grid($jc: center, $ai: center) {
+@mixin grid($ai: center, $ji: center) {
 	display: grid;
-	justify-content: $jc;
 	align-items: $ai;
+	justify-items: $ji;
 }
 
 $maxWidth: 1430;

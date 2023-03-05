@@ -1966,47 +1966,83 @@ body::-webkit-scrollbar-thumb:hover {
   width: 35px;
   height: 20px;
 }
+.reviews {
+  padding: 30px 0;
+}
 .reviews__content {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+.reviews__fitback {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  justify-items: end;
+  grid-template: 1fr repeat(2, auto)/repeat(2, auto) 1fr;
+  grid-template-areas: "icon text text" "author author author" "button button next-reviews";
+  row-gap: 10px;
+  padding: 55px 120px;
+  background-color: #f5f7ff;
   font-weight: 400;
   line-height: 1.5; /* 27/18 */
+  max-width: 1160px;
+}
+.reviews__fitback-text {
+  grid-area: text;
+  font-size: 1.3846rem;
+}
+.reviews__fitback-author {
+  justify-items: end;
+  grid-area: author;
+  font-size: 1.0769rem;
+  margin-bottom: 10px;
 }
 .reviews__icon-wrap {
   width: 40px;
   height: 25px;
-}
-.reviews__fitback-text {
-  font-size: 1.3846rem;
-}
-.reviews__fitback-owner {
-  font-size: 1.0769rem;
+  margin-right: 30px;
 }
 .reviews__button {
+  grid-area: button;
   padding: 6px 25px;
 }
+.reviews__next-reviews {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: end;
+  grid-template: auto/repeat(2, 1fr);
+  grid-area: next-reviews;
+}
 .reviews__next-review {
+  position: relative;
+  cursor: pointer;
   width: 12px;
   height: 12px;
-  background-color: #0156FF;
+  background-color: #cacdd8;
   border-radius: 50%;
-  position: relative;
 }
-.reviews__next-review::before, .reviews__next-review::after {
+.reviews__next-review:first-child {
+  margin-right: 5px;
+}
+.reviews__next-review:first-child::before, .reviews__next-review:last-child::before {
   content: "";
   position: absolute;
+  top: 0;
+  right: 45px;
   width: 12px;
   height: 12px;
-  background-color: #0156FF;
+  background-color: #cacdd8;
   border-radius: 50%;
-}
-.reviews__next-review::before {
-  left: 20px;
-}
-.reviews__next-review::after {
-  right: 20px;
 }
 
 .advantages-store {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .advantages-store__content {
   display: -webkit-box;
