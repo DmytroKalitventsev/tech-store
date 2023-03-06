@@ -179,7 +179,7 @@
 		}
 	}
 	@media (max-width: $bpLaptopMin) {
-		@include adaptive-value("width", 435, 260, 1);
+		@include adaptive-value("width", 435, 260, 1023.98);
 		align-items: flex-start;
 		position: fixed;
 		left: -100%;
@@ -192,7 +192,7 @@
 		transition: left 0.3s ease 0s;
 		&::before {
 			content: "";
-			@include adaptive-value("width", 435, 260, 1);
+			@include adaptive-value("width", 435, 260, 1023.98);
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -205,8 +205,9 @@
 		}
 	}
 }
-@media (max-width: $bpLaptopMin) {
-	.menu-open {
+
+.menu-open {
+	@media (max-width: $bpLaptopMin) {
 		& .header__content {
 			justify-content: flex-end;
 		}
@@ -226,7 +227,7 @@
 			left: 0;
 		}
 		& .button-menu {
-			@include adaptive-value("left", 368, 206, 1);
+			@include adaptive-value("left", 368, 206, 1023.98);
 			position: fixed;
 			top: 15px;
 			&__item,
@@ -252,12 +253,11 @@
 			background: #00000057;
 		}
 	}
-}
-@media (max-width: $bpMobile) {
-	.menu-open {
+	@media (max-width: $bpMobile) {
 		& .logo {
 			left: 14px;
 		}
 	}
 }
+
 @import "./header-actions";
