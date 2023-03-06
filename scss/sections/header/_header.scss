@@ -125,7 +125,7 @@
 		}
 	}
 	&__item {
-		&_offer {
+		&_deals {
 			@include flex;
 		}
 	}
@@ -159,15 +159,15 @@
 			padding: 7px 24px;
 		}
 		@media (max-width: $bpLaptopMax1) {
-			padding: 8px 10px;
+			padding: 8px 9px;
 			&_offer {
-				padding: 6px 14px;
+				padding: 6px 13px;
 			}
 		}
 		@media (max-width: $bpLaptopMax3) {
-			padding: 8px 6px;
+			padding: 8px 5px;
 			&_offer {
-				padding: 6px 6px;
+				padding: 6px 5px;
 			}
 		}
 		@media (max-width: $bpLaptopMin) {
@@ -205,7 +205,6 @@
 		}
 	}
 }
-
 .menu-open {
 	@media (max-width: $bpLaptopMin) {
 		& .header__content {

@@ -4,7 +4,7 @@
 		@include grid;
 	}
 	&__fitback {
-		@include grid(start, end);
+		@include grid(center, end);
 		grid-template: 1fr repeat(2, auto) / repeat(2, auto) 1fr;
 		grid-template-areas:
 			"icon text text"
@@ -19,24 +19,63 @@
 		&-text {
 			grid-area: text;
 			font-size: 1.3846rem;
+			@media (max-width: $bpLaptopMin) {
+				font-size: 1.2308rem;
+			}
+			@media (max-width: $bpTablet) {
+				font-size: 1rem;
+			}
 		}
 		&-author {
-			justify-items: end;
+			justify-self: end;
 			grid-area: author;
 			font-size: 1.0769rem;
 			margin-bottom: 10px;
+			@media (max-width: $bpLaptopMin) {
+				font-size: 0.9231rem;
+			}
+			@media (max-width: $bpTablet) {
+				font-size: 0.7692rem;
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: $bpLaptopMin) {
+			@include adaptive-value("padding-left", 120, 20, 1023.98);
+			@include adaptive-value("padding-right", 120, 20, 1023.98);
+			@include adaptive-value("padding-top", 55, 25, 1023.98);
+			@include adaptive-value("padding-bottom", 55, 25, 1023.98);
 		}
 	}
 	&__icon {
 		&-wrap {
+			align-self: start;
 			width: 40px;
 			height: 25px;
 			margin-right: 30px;
+			@media (max-width: $bpLaptopMin) {
+				width: 30px;
+				height: 20px;
+				margin-right: 25px;
+			}
+			@media (max-width: $bpTablet) {
+				width: 20px;
+				height: 15px;
+				margin-right: 20px;
+			}
 		}
 	}
 	&__button {
 		grid-area: button;
 		padding: 6px 25px;
+		@media (max-width: $bpLaptopMin) {
+			padding: 6px 20px;
+		}
+		@media (max-width: $bpTablet) {
+			padding: 7px 16px;
+		}
+		@media (max-width: $bpTablet) {
+			padding: 7px 10px;
+		}
 	}
 	&__next-reviews {
 		@include grid(center, end);
@@ -63,6 +102,15 @@
 			height: 12px;
 			background-color: #cacdd8;
 			border-radius: 50%;
+			@media (max-width: $bpTablet) {
+				width: 9px;
+				height: 9px;
+				right: 38px;
+			}
+		}
+		@media (max-width: $bpTablet) {
+			width: 9px;
+			height: 9px;
 		}
 	}
 }
