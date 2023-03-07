@@ -1,36 +1,92 @@
 .advantages-store {
-	padding: 30px 0;
+	padding: 30px 0px 45px;
 	&__content {
-		@include flex;
-		gap: 130px;
+		@include flex(center, flex-start);
+		gap: 120px;
+		@media (max-width: $bpLaptopMin) {
+			gap: 60px;
+		}
+		@media (max-width: $bpTablet) {
+			gap: 20px;
+		}
+		@media (max-width: $bpMobile) {
+			flex-wrap: wrap;
+		}
+	}
+	@media (max-width: $bpLaptopMin) {
+		padding: 25px 0px 40px;
+	}
+	@media (max-width: $bpTablet) {
+		padding: 15px 0px 35px;
+	}
+	@media (max-width: $bpMobile) {
+		padding: 10px 0px 25px;
 	}
 }
 .advantages-items {
 	@include flex(center, center, column);
 	text-align: center;
-	&__icon-wrap {
-		@include flex;
-		width: 65px;
-		height: 65px;
-		margin-bottom: 25px;
-		color: #fff;
-		background-color: $mainColorElements;
-		border-radius: 50%;
-	}
 	&__icon {
 		width: 25px;
 		height: 25px;
+		&-wrap {
+			@include flex;
+			width: 65px;
+			height: 65px;
+			margin-bottom: 25px;
+			color: #fff;
+			background-color: $mainColorElements;
+			border-radius: 50%;
+			@media (max-width: $bpLaptopMin) {
+				width: 55px;
+				height: 55px;
+				margin-bottom: 20px;
+			}
+			@media (max-width: $bpTablet) {
+				width: 45px;
+				height: 45px;
+				margin-bottom: 10px;
+			}
+		}
+		@media (max-width: $bpLaptopMin) {
+			width: 21px;
+			height: 21px;
+		}
+		@media (max-width: $bpTablet) {
+			width: 17px;
+			height: 17px;
+		}
 	}
 	&__title {
 		font-weight: 700;
 		font-size: 1.3846rem;
 		line-height: 1.32;
 		margin-bottom: 15px;
+		@media (max-width: $bpLaptopMin) {
+			font-size: 1.2308rem;
+			margin-bottom: 13px;
+		}
+		@media (max-width: $bpTablet) {
+			font-size: 1.0769rem;
+			margin-bottom: 10px;
+		}
+		@media (max-width: $bpTablet2) {
+			max-width: 100px;
+		}
+		@media (max-width: $bpMobile) {
+			max-width: initial;
+		}
 	}
 	&__descr {
 		font-weight: 400;
 		font-size: 1.0769rem;
 		line-height: 1.4;
 		max-width: 265px;
+		@media (max-width: $bpLaptopMin) {
+			font-size: 1rem;
+		}
+		@media (max-width: $bpTablet) {
+			font-size: 0.9231rem;
+		}
 	}
 }

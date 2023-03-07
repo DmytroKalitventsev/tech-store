@@ -11,7 +11,7 @@
 	justify-items: $ji;
 }
 
-@mixin adaptive-value($property, $startSize, $minSize, $maxWidthContainer) {
+@mixin adaptive($property, $startSize, $minSize, $maxWidthContainer) {
 	$addSize: $startSize - $minSize;
 	#{$property}: $startSize + px;
 	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));

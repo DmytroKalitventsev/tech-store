@@ -40,10 +40,10 @@
 			}
 		}
 		@media (max-width: $bpLaptopMin) {
-			@include adaptive-value("padding-left", 120, 20, 1023.98);
-			@include adaptive-value("padding-right", 120, 20, 1023.98);
-			@include adaptive-value("padding-top", 55, 25, 1023.98);
-			@include adaptive-value("padding-bottom", 55, 25, 1023.98);
+			@include adaptive("padding-left", 120, 20, 1023.98);
+			@include adaptive("padding-right", 120, 20, 1023.98);
+			@include adaptive("padding-top", 55, 25, 1023.98);
+			@include adaptive("padding-bottom", 55, 25, 1023.98);
 		}
 	}
 	&__icon {
